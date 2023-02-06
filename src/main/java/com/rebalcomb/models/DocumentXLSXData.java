@@ -1,5 +1,6 @@
 package com.rebalcomb.models;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,8 +10,13 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "geo_data")
 public class DocumentXLSXData {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String ip;
     private String port;
     private String time;
@@ -22,7 +28,7 @@ public class DocumentXLSXData {
     private String bssid;
     private String essid;
     private String security;
-    private String key;
+    private String keyy;
     private String wps;
     private String lanIp;
     private String lanMask;

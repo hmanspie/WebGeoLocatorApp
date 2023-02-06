@@ -26,7 +26,7 @@ public class XLSXService {
         for (DocumentXLSXData documentXLSXData : documentXLSXDataList) {
             data.put(String.valueOf(counter++), new Object[]{documentXLSXData.getIp(), documentXLSXData.getPort(), documentXLSXData.getTime(), documentXLSXData.getStatus()
                     , documentXLSXData.getAuthorization(), documentXLSXData.getServername(), documentXLSXData.getRadioOff(), documentXLSXData.getHidden(), documentXLSXData.getBssid()
-                    , documentXLSXData.getEssid(), documentXLSXData.getSecurity(), documentXLSXData.getKey(), documentXLSXData.getWps(), documentXLSXData.getLanIp(), documentXLSXData.getLanMask()
+                    , documentXLSXData.getEssid(), documentXLSXData.getSecurity(), documentXLSXData.getKeyy(), documentXLSXData.getWps(), documentXLSXData.getLanIp(), documentXLSXData.getLanMask()
                     , documentXLSXData.getWanIp(), documentXLSXData.getWanMask(), documentXLSXData.getWanGate(), documentXLSXData.getDomain(), documentXLSXData.getCode(), documentXLSXData.getCountry()
                     , documentXLSXData.getRegion(), documentXLSXData.getCity(), documentXLSXData.getLatitude(), documentXLSXData.getLongitude(), documentXLSXData.getZipcode(), documentXLSXData.getTimezone()});
         }
@@ -138,7 +138,7 @@ public class XLSXService {
         documentXLSXData.setBssid(array[counter++]);
         documentXLSXData.setEssid(array[counter++]);
         documentXLSXData.setSecurity(array[counter++]);
-        documentXLSXData.setKey(array[counter++]);
+        documentXLSXData.setKeyy(array[counter++]);
         documentXLSXData.setWps(array[counter++]);
         documentXLSXData.setLanIp(array[counter++]);
         documentXLSXData.setLanMask(array[counter++]);
