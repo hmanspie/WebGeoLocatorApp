@@ -55,40 +55,53 @@ body{
 .left-buttons{
     background: #000000;
     border-style: solid;
-    border-color: red;
+    border-color: green;
     margin: 8px 0px 0px 8px;
     width: 93%;
     font-size: 12px;
     color: white;
     height: 30px;
+    border-radius: 6px;
 }
 
 .left-buttons:hover{
-    border-color: white;
+    border-color: lightgreen;
 }
 
 .left-buttons:active{
-    border-color: pink;
-}
-
-.input-left{
-    margin: 8px 0px 0px 8px;
-    width: 90%;
-    font-size: 12px;
-    height: 20px;
-    font-weight: 2px;
+    border-color: white;
 }
 
 .left-select{
     margin: 8px 0px 0px 8px;
     width: 93%;
+    height: 576px;
     background: #000000;
     color: white;
-    border-color: red;
+    border-color: green;
+    overflow: hidden;
 }
 
 .left-select:active{
-    border-color: pink;
+    border-color: lightgreen;
+}
+a {
+    color: white;
+    text-decoration: none; }
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
 }
   </style>
   <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.63.0/maps/maps-web.min.js'></script>
@@ -100,7 +113,7 @@ body{
             <button class="left-buttons"><a th:href="@{/map/download}">Download file</a></button>
 
             <form th:object="${ipRequest}" th:action="@{/map/selected}" th:method="post">
-            <select name="IP" size="38" class="left-select" th:field="*{ip}" id="ip">
+            <select name="IP" size="36" class="left-select" th:field="*{ip}" id="ip">
                 <th:block th:each="ip : ${ipList}">
                     <option th:value="${ip}" th:text="${ip}"></option>
                 </th:block>
