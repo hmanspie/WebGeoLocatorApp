@@ -11,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "data")
+@Table(name = "geo_data")
 public class DocumentXLSXData {
 
     @Id
@@ -28,7 +28,7 @@ public class DocumentXLSXData {
     private String bssid;
     private String essid;
     private String security;
-    private String key;
+    private String keyy;
     private String wps;
     private String lanIp;
     private String lanMask;
