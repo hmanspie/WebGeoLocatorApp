@@ -79,7 +79,6 @@ body{
     background: #000000;
     color: white;
     border-color: green;
-    overflow: hidden;
 }
 
 .left-select:active{
@@ -109,17 +108,19 @@ a:active {
 <body>
   <div class="split-main-page">
         <div class="left-main-div">
-            <button class="left-buttons"><a th:href="@{/map/home}">Update</a></button>
-            <button class="left-buttons"><a th:href="@{/map/download}">Download file</a></button>
+            <button class="left-buttons"><a th:href="@{/map/home}">Update map</a></button>
+            <button class="left-buttons"><a th:href="@{/map/download}">Download ip list</a></button>
 
             <form th:object="${ipRequest}" th:action="@{/map/selected}" th:method="post">
-            <select name="IP" size="36" class="left-select" th:field="*{ip}" id="ip">
+            <select name="IP" size="50" class="left-select" th:field="*{ip}" id="ip">
                 <th:block th:each="ip : ${ipList}">
                     <option th:value="${ip}" th:text="${ip}"></option>
                 </th:block>
             </select>
-                <button class="left-buttons" type="submit"><a>Add point</a></button>
+                <button class="left-buttons" type="submit"><a>Add point on map</a></button>
             </form>
+
+            <button class="left-buttons"><a th:href="@{/map/save}">Save data to file</a></button>
 
         </div>
   </div>

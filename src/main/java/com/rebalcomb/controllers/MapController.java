@@ -55,4 +55,15 @@ public class MapController {
         return model;
     }
 
+    @GetMapping("/save")
+    public ModelAndView save(ModelAndView model) throws IOException, InterruptedException {
+        model.setViewName("home");
+        model.addObject("apikey", tomTomApiKey);
+        model.addObject("ipRequest", new IpRequest());
+        model.addObject("ipList", mapService.download());
+        model.addObject("coolLocations", mapService.locations);
+        mapService.saveDataToFile();
+        return model;
+    }
+
 }
